@@ -26,6 +26,7 @@ namespace RestRestaurant.Controllers
         /// </summary>
         /// <param name="id">Order id</param>
         /// <returns>Order</returns>
+        [HttpGet(Name = "GetOrder")]
         public IResult GetOrder(int id)
         {
             var order = DatabaseManager.GetInstance().GetOrder(id);
